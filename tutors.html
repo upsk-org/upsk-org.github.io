@@ -81,7 +81,10 @@
   </dialog>
 
   <footer><div class="brand"><span class="brand-mark">ABC</span><span>ABC Tutoring</span></div><p>Friendly K–12 tutoring and homework help.</p><p>© <span id="year"></span> ABC Tutoring</p></footer>
-  <script src="telemetry.js"></script>
-  <script src="script.js"></script>
+  <script type="importmap">
+    { "imports": { "posthog-js": "https://cdn.jsdelivr.net/npm/posthog-js@1.427.2/+esm" } }
+  </script>
+  <script type="module" src="telemetry.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

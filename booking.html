@@ -27,7 +27,10 @@
       <div class="booking-success" id="booking-success" hidden><h2>Request received!</h2><p>This demo form is ready to connect to Dana’s booking system.</p></div>
     </section>
   </main>
-  <script src="telemetry.js"></script>
-  <script src="script.js"></script>
+  <script type="importmap">
+    { "imports": { "posthog-js": "https://cdn.jsdelivr.net/npm/posthog-js@1.427.2/+esm" } }
+  </script>
+  <script type="module" src="telemetry.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

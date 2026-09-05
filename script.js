@@ -6,6 +6,10 @@ if (year) year.textContent = new Date().getFullYear();
 function trackEvent(eventName, properties = {}) {
   if (window.posthog && typeof window.posthog.capture === "function") {
     window.posthog.capture(eventName, properties);
+  } else {
+    // Keep early interactions until the telemetry module finishes loading.
+    window.posthogEventQueue = window.posthogEventQueue || [];
+    window.posthogEventQueue.push([eventName, properties]);
   }
 }
 
