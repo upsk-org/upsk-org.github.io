@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Session | ABC Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="booking-page">
+  <header class="site-header directory-header"><a class="brand" href="index.html"><span class="brand-mark">ABC</span><span>ABC Tutoring</span></a><a class="back-link" href="tutors.html">← Back to tutors</a></header>
+  <main class="booking-main">
+    <section class="booking-card">
+      <p class="eyebrow">BOOK A SESSION</p>
+      <h1>Let’s plan your tutoring session.</h1>
+      <p id="booking-tutor">Complete the details below to request a session.</p>
+      <form id="booking-form">
+        <label>Parent’s name<input required name="parent" autocomplete="name"></label>
+        <label>Parent’s email<input required type="email" name="email" autocomplete="email"></label>
+        <label>Student’s first name<input required name="student" autocomplete="given-name"></label>
+        <label>Student’s grade<select required name="grade"><option value="">Select a grade</option><option>Kindergarten</option><option>1st grade</option><option>2nd grade</option><option>3rd grade</option><option>4th grade</option><option>5th grade</option><option>6th grade</option><option>7th grade</option><option>8th grade</option><option>9th grade</option><option>10th grade</option><option>11th grade</option><option>12th grade</option></select></label>
+        <label>Requested subject<select required name="subject" id="booking-subject"><option value="">Select a subject</option><option>Math</option><option>English</option><option>Science</option><option>History</option><option>Spanish</option><option>Physics</option><option>Biology</option></select></label>
+        <button class="button" type="submit">Request a session</button>
+      </form>
+      <div class="booking-success" id="booking-success" hidden><h2>Request received!</h2><p>This demo form is ready to connect to Dana’s booking system.</p></div>
+    </section>
+  </main>
+  <script src="telemetry.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

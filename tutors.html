@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse friendly K–12 tutors at ABC Tutoring.">
+  <title>Find a Tutor | ABC Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="directory-page">
+  <header class="site-header directory-header">
+    <a class="brand" href="index.html" aria-label="ABC Tutoring home">
+      <span class="brand-mark" aria-hidden="true">ABC</span>
+      <span>ABC Tutoring</span>
+    </a>
+    <a class="back-link" href="index.html">← Back to home</a>
+  </header>
+
+  <main class="directory-main">
+    <section class="directory-intro">
+      <p class="eyebrow">MEET OUR TUTORS</p>
+      <h1>Find a tutor who fits.</h1>
+      <p>Explore experienced, encouraging tutors for every stage of the K–12 journey.</p>
+    </section>
+
+    <section class="filter-panel" aria-label="Tutor filters">
+      <div class="filter-group">
+        <label for="subject-filter">Subject</label>
+        <select id="subject-filter">
+          <option value="all">All subjects</option>
+          <option>Math</option><option>English</option><option>Science</option><option>History</option><option>Spanish</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="grade-filter">Grade level</label>
+        <select id="grade-filter">
+          <option value="all">All grade levels</option>
+          <option value="elementary">Elementary (K–5)</option>
+          <option value="middle">Middle school (6–8)</option>
+          <option value="high">High school (9–12)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="availability-filter">Availability</label>
+        <select id="availability-filter">
+          <option value="all">Any time</option>
+          <option value="morning">Morning</option>
+          <option value="afternoon">Afternoon</option>
+          <option value="evening">Evening</option>
+        </select>
+      </div>
+      <button class="clear-filters" id="clear-filters" type="button">Clear filters</button>
+    </section>
+
+    <div class="results-heading">
+      <p id="results-count" aria-live="polite"></p>
+      <p class="notice"><span aria-hidden="true">◷</span> Sessions require at least one day’s notice.</p>
+    </div>
+    <section class="tutor-grid" id="tutor-grid" aria-label="Available tutors"></section>
+    <div class="empty-results" id="empty-results" hidden>
+      <h2>No exact matches yet</h2>
+      <p>Try clearing a filter to see more tutors.</p>
+      <button class="button" type="button" id="empty-clear">Clear filters</button>
+    </div>
+  </main>
+
+  <dialog class="availability-dialog" id="availability-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close availability">×</button>
+    <div class="dialog-tutor">
+      <img id="dialog-photo" src="" alt="">
+      <div><p class="eyebrow">WEEKLY AVAILABILITY</p><h2 id="dialog-title"></h2><p id="dialog-details"></p></div>
+    </div>
+    <p class="dialog-note">Select an available time to continue to booking. Times begin tomorrow.</p>
+    <div class="week-calendar" id="week-calendar"></div>
+    <div class="dialog-actions">
+      <p><strong id="slot-count"></strong> openings over the next 7 days</p>
+    </div>
+  </dialog>
+
+  <footer><div class="brand"><span class="brand-mark">ABC</span><span>ABC Tutoring</span></div><p>Friendly K–12 tutoring and homework help.</p><p>© <span id="year"></span> ABC Tutoring</p></footer>
+  <script src="telemetry.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
